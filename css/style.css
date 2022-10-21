@@ -39,3 +39,22 @@ body {
   display: grid;
   place-items: center;
 }
+
+.card {
+  width: 30rem;
+  padding: 22px;
+  background-color: var(--dark-blue);
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  box-shadow: 0 0 15px 8px var(--black);
+}
+
+.card__figure {
+  height: 4rem;
+  width: 4rem;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  background-color: hsla(0, 0%, 100%, 0.05);
+  display: grid;
+  place-items: center;
+}
