@@ -47,3 +47,39 @@ function checkedVerify() {
 }
 
 // * Note: When you use `!! `, the return value is always a boolean value. Even if the return value is `null` or `undefined`.
+
+
+function addModal() {
+    // Container
+    const modalContainer = document.getElementById('modal');
+
+    const modalBackground = document.createElement('div');
+    modalBackground.classList.add('modal__background');
+
+    const modal = document.createElement('div');
+    modal.classList.add('modal');
+
+    const modalTitle = document.createElement('h3');
+    modalTitle.classList.add('card__title');
+    modalTitle.classList.add('modal__title');
+    modalTitle.textContent = `Warning`;
+
+    const modalMessage = document.createElement('p');
+    modalMessage.classList.add('modal__message');
+    modalMessage.textContent = `You have to select an option!`;
+
+    const modalBtn = document.createElement('button');
+    modalBtn.classList.add('form__btn');
+    modalBtn.classList.add('modal__btn');
+    modalBtn.textContent = `OK`;
+
+    modal.appendChild(modalTitle);
+    modal.appendChild(modalMessage);
+    modal.appendChild(modalBtn);
+
+    modalBackground.appendChild(modal);
+
+    modalContainer.appendChild(modalBackground);
+}
+
+// addModal();
