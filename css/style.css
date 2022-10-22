@@ -15,7 +15,8 @@
   /* Neutral */
   --light-grey: hsl(217, 12%, 63%);
   --medium-grey: hsl(216, 12%, 54%);
-  --dark-blue: hsl(213, 19%, 18%);
+  --medium-blue: hsl(213, 19%, 18%);
+  --dark-blue: hsl(215, 22%, 15%);
   --very-dark-blue: hsl(216, 12%, 8%);
   /* Font */
   --font-primary: 'Overpass', sans-serif;
@@ -58,7 +59,7 @@ body {
   width: 4rem;
   border-radius: 100%;
   -webkit-border-radius: 100%;
-  background-color: hsla(0, 0%, 100%, 0.05);
+  background-color: var(--medium-blue);
   display: grid;
   place-items: center;
 }
@@ -85,7 +86,7 @@ body {
 }
 
 .form__label {
-  background-color: hsla(0, 0%, 100%, 0.05);
+  background-color: var(--medium-blue);
   width: 45px;
   height: 45px;
   border-radius: 50%;
@@ -138,7 +139,7 @@ body {
 }
 
 .card__back--selected {
-  background-color: hsla(0, 0%, 100%, 0.1);
+  background-color: var(--medium-blue);
   color: var(--orange);
   margin: 2rem 0 2.8rem;
   padding: 8px 10px;
