@@ -61,7 +61,7 @@ body {
 
 .card__title {
   font-size: 2.5rem;
-  margin: 1.8rem 0;
+  margin: 2.5rem 0 1.8rem;
 }
 
 .card__description {
@@ -77,9 +77,10 @@ body {
 .card__form>div {
   display: flex;
   justify-content: space-between;
+  position: relative;
 }
 
-.form__option {
+.form__label {
   background-color: hsla(0, 0%, 100%, 0.05);
   width: 45px;
   height: 45px;
@@ -87,11 +88,20 @@ body {
   -webkit-border-radius: 50%;
   display: grid;
   place-items: center;
+  cursor: pointer;
 }
 
-.form__option input {
+.form__label:hover {
+  background-color: var(--medium-grey);
+}
+
+.form__input {
   visibility: hidden;
   position: absolute;
+}
+
+.form__input:checked+.form__label {
+  background-color: var(--orange);
 }
 
 .form__btn {
@@ -99,11 +109,19 @@ body {
   color: var(--white);
   border: none;
   width: 100%;
-  margin: 2rem 0 1rem;
+  margin: 2.5rem 0 1rem;
   padding: 1.4rem 0;
   border-radius: 25px;
   -webkit-border-radius: 25px;
   text-transform: uppercase;
   font-weight: 400;
   letter-spacing: 3px;
+  cursor: pointer;
+  transition-property: background-color, color;
+  transition-duration: .3s;
+}
+
+.form__btn:hover {
+  background-color: var(--white);
+  color: var(--orange);
 }
