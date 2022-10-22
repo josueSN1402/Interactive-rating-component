@@ -24,7 +24,7 @@
     <section class="card">
       <div class="card__wrapper">
         <div class="card__figure">
-          <img src="./images/icon-star.svg" aria-hidden="true">
+          <img src="./images/icon-star.svg" aria-hidden="true" alt="">
         </div>
         <div class="card__content">
           <h3 class="card__title">How did we do?</h3>
@@ -33,20 +33,55 @@
         </div>
         <form class="card__form">
           <div>
-            <input type="radio" name="option" id="option1" class="form__input" />
-            <label for="option1" class="form__label" tabindex="0" role="option">1</label>
+            <input type="radio" name="option" id="option1" class="form__input" value="Value 1" />
+            <label
+              for="option1"
+              class="form__label"
+              tabindex="0"
+              aria-label="Option with value 1"
+            >
+              <span>1</span>
+            </label>
 
-            <input type="radio" name="option" id="option2" class="form__input" />
-            <label for="option2" class="form__label" tabindex="0" role="option">2</label>
+            <input type="radio" name="option" id="option2" class="form__input" value="Value 2" />
+            <label
+              for="option2"
+              class="form__label"
+              tabindex="0"
+              aria-label="Option with value 2"
+            >
+              <span>2</span>
+            </label>
 
-            <input type="radio" name="option" id="option3" class="form__input" />
-            <label for="option3" class="form__label" tabindex="0" role="option">3</label>
+            <input type="radio" name="option" id="option3" class="form__input" value="Value 3" />
+            <label
+              for="option3"
+              class="form__label"
+              tabindex="0"
+              aria-label="Option with value 3"
+            >
+              <span>3</span>
+            </label>
 
-            <input type="radio" name="option" id="option4" class="form__input" />
-            <label for="option4" class="form__label" tabindex="0" role="option">4</label>
+            <input type="radio" name="option" id="option4" class="form__input" value="Value 4" />
+            <label
+              for="option4"
+              class="form__label"
+              tabindex="0"
+              aria-label="Option with value 4"
+            >
+              <span>4</span>
+            </label>
 
-            <input type="radio" name="option" id="option5" class="form__input" />
-            <label for="option5" class="form__label" tabindex="0" role="option">5</label>
+            <input type="radio" name="option" id="option5" class="form__input" value="Value 5" />
+            <label
+              for="option5"
+              class="form__label"
+              tabindex="0"
+              aria-label="Option with value 5"
+            >
+              <span>5</span>
+            </label>
           </div>
 
           <input type="submit" class="form__btn" value="submit" />
@@ -54,7 +89,7 @@
       </div>
       <div class="card__back disabled">
         <div class="card__back--figure">
-          <img src="./images/illustration-thank-you.svg" aria-hidden="true">
+          <img src="./images/illustration-thank-you.svg" aria-hidden="true" alt="">
           <p class="card__back--selected">You selected <span id="selected-number">0</span> out of 5</p>
         </div>
         <div class="card__content">

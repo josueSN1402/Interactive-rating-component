@@ -94,9 +94,12 @@ body {
   display: grid;
   place-items: center;
   cursor: pointer;
+  transition-property: background-color;
+  transition-duration: .3s;
 }
 
-.form__label:hover {
+.form__label:hover,
+.form__label:focus {
   background-color: var(--medium-grey);
 }
 
@@ -126,7 +129,8 @@ body {
   transition-duration: .3s;
 }
 
-.form__btn:hover {
+.form__btn:hover,
+.form__btn:focus {
   background-color: var(--white);
   color: var(--orange);
 }
