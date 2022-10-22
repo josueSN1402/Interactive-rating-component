@@ -22,34 +22,47 @@
 <body>
   <main id="primary-content">
     <section class="card">
-      <div class="card__figure">
-        <img src="./images/icon-star.svg" alt="Star">
-      </div>
-      <div class="card__content">
-        <h3 class="card__title">How did we do?</h3>
-        <p class="card__description">Please let us know how we did with your support request. All feedback is
-          appreciated to help us improve oour offering!</p>
-      </div>
-      <form class="card__form">
-        <div>
-          <input type="radio" name="option" id="option1" class="form__input" />
-          <label for="option1" class="form__label" tabindex="0" role="option">1</label>
-
-          <input type="radio" name="option" id="option2" class="form__input" />
-          <label for="option2" class="form__label" tabindex="0" role="option">2</label>
-
-          <input type="radio" name="option" id="option3" class="form__input" />
-          <label for="option3" class="form__label" tabindex="0" role="option">3</label>
-
-          <input type="radio" name="option" id="option4" class="form__input" />
-          <label for="option4" class="form__label" tabindex="0" role="option">4</label>
-
-          <input type="radio" name="option" id="option5" class="form__input" />
-          <label for="option5" class="form__label" tabindex="0" role="option">5</label>
+      <div class="card__wrapper">
+        <div class="card__figure">
+          <img src="./images/icon-star.svg" aria-hidden="true">
         </div>
+        <div class="card__content">
+          <h3 class="card__title">How did we do?</h3>
+          <p class="card__description">Please let us know how we did with your support request. All feedback is
+            appreciated to help us improve oour offering!</p>
+        </div>
+        <form class="card__form">
+          <div>
+            <input type="radio" name="option" id="option1" class="form__input" />
+            <label for="option1" class="form__label" tabindex="0" role="option">1</label>
 
-        <input type="submit" class="form__btn" value="submit" />
-      </form>
+            <input type="radio" name="option" id="option2" class="form__input" />
+            <label for="option2" class="form__label" tabindex="0" role="option">2</label>
+
+            <input type="radio" name="option" id="option3" class="form__input" />
+            <label for="option3" class="form__label" tabindex="0" role="option">3</label>
+
+            <input type="radio" name="option" id="option4" class="form__input" />
+            <label for="option4" class="form__label" tabindex="0" role="option">4</label>
+
+            <input type="radio" name="option" id="option5" class="form__input" />
+            <label for="option5" class="form__label" tabindex="0" role="option">5</label>
+          </div>
+
+          <input type="submit" class="form__btn" value="submit" />
+        </form>
+      </div>
+      <div class="card__back disabled">
+        <div class="card__back--figure">
+          <img src="./images/illustration-thank-you.svg" aria-hidden="true">
+          <p class="card__back--selected">You seleced <span id="selected-number">0</span> out of 5</p>
+        </div>
+        <div class="card__content">
+          <h3 class="card__title">Thank you!</h3>
+          <p class="card__description">Please let us know how we did with your support request. All feedback is
+            appreciated to help us improve oour offering!</p>
+        </div>
+      </div>
     </section>
   </main>
   <script src="./js/main.js"></script>
