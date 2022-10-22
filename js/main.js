@@ -41,45 +41,54 @@ function checkedVerify() {
     if (sentinel > 0) {
         return value;
     } else {
-        alert('Tiene que seleccionar una opción');
+        addModal();
         return;
     }
 }
 
 // * Note: When you use `!! `, the return value is always a boolean value. Even if the return value is `null` or `undefined`.
 
-
 function addModal() {
-    // Container
-    const modalContainer = document.getElementById('modal');
+    const mainTag = document.getElementById('primary-content'); // main tag
 
-    const modalBackground = document.createElement('div');
+    const modalContainer = document.createElement('div'); // Create modal container
+    modalContainer.setAttribute('id', 'modal');
+
+    const modalBackground = document.createElement('div'); // Create modal background
     modalBackground.classList.add('modal__background');
 
-    const modal = document.createElement('div');
+    const modal = document.createElement('div'); // Create modal card
     modal.classList.add('modal');
 
-    const modalTitle = document.createElement('h3');
+    const modalTitle = document.createElement('h3'); // Modal title
     modalTitle.classList.add('card__title');
     modalTitle.classList.add('modal__title');
     modalTitle.textContent = `Warning`;
 
-    const modalMessage = document.createElement('p');
+    const modalMessage = document.createElement('p'); // Modal message
     modalMessage.classList.add('modal__message');
     modalMessage.textContent = `You have to select an option!`;
 
-    const modalBtn = document.createElement('button');
+    const modalBtn = document.createElement('button'); // Modal button
     modalBtn.classList.add('form__btn');
     modalBtn.classList.add('modal__btn');
     modalBtn.textContent = `OK`;
+    // Function to close modal
+    modalBtn.addEventListener('click', () => {
+        modalContainer.remove();
+    });
+    // Button accessibility attributes
+    modalBtn.setAttribute('tabindex', '0');
+    modalBtn.setAttribute('aria-label', 'Close button for warning');
 
+    // Added elements to modal
     modal.appendChild(modalTitle);
     modal.appendChild(modalMessage);
     modal.appendChild(modalBtn);
 
     modalBackground.appendChild(modal);
-
     modalContainer.appendChild(modalBackground);
-}
 
-// addModal();
+    // Insert modal into parent container
+    mainTag.appendChild(modalContainer);
+}
