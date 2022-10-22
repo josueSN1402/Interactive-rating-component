@@ -13,7 +13,7 @@
   /* Primary */
   --orange: hsl(25, 97%, 53%);
   /* Neutral */
-  -light--grey: hsl(217, 12%, 63%);
+  --light-grey: hsl(217, 12%, 63%);
   --medium-grey: hsl(216, 12%, 54%);
   --dark-blue: hsl(213, 19%, 18%);
   --very-dark-blue: hsl(216, 12%, 8%);
@@ -41,7 +41,7 @@ body {
 }
 
 .card {
-  width: 30rem;
+  width: 35rem;
   padding: 22px;
   background-color: var(--dark-blue);
   border-radius: 15px;
@@ -57,4 +57,53 @@ body {
   background-color: hsla(0, 0%, 100%, 0.05);
   display: grid;
   place-items: center;
+}
+
+.card__title {
+  font-size: 2.5rem;
+  margin: 1.8rem 0;
+}
+
+.card__description {
+  color: var(--light-grey);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.card__form {
+  margin-top: 2.5rem;
+}
+
+.card__form>div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form__option {
+  background-color: hsla(0, 0%, 100%, 0.05);
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+
+.form__option input {
+  visibility: hidden;
+  position: absolute;
+}
+
+.form__btn {
+  background-color: var(--orange);
+  color: var(--white);
+  border: none;
+  width: 100%;
+  margin: 2rem 0 1rem;
+  padding: 1.4rem 0;
+  border-radius: 25px;
+  -webkit-border-radius: 25px;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 3px;
 }
